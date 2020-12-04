@@ -10,7 +10,6 @@ class ElementosModelo extends BaseLibreria
    private $fecha_proceso;
    private $consultas;
    private $datos_elementos;
-
    protected function __construct()
    {
    }

@@ -9,12 +9,6 @@ class RutasModelo extends BaseLibreria
    private $datos_rutas;
    protected function __construct()
    {
-      $this->id = null;
-      $this->ruta_descripcion = null;
-      $this->ruta = null;
-      $this->fecha_proceso = null;
-      $this->consultas = null;
-      $this->datos_rutas = null;
    }
    protected function get_atributo_modelo($atributo)
    {

@@ -11,7 +11,6 @@ class Elementos extends ElementosModelo
    private $datos_elementos;
    private $vista;
    private $respuesta;
-
    public function __construct()
    {
       $this->vista = get_class($this) . ".php";

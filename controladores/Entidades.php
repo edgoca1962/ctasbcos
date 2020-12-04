@@ -4,10 +4,8 @@ class Entidades extends EntidadesModelo
    private $id;
    private $nombre_entidad;
    private $fecha_proceso;
-
    private $vista;
    private $respuesta;
-
    public function __construct()
    {
       $this->vista = get_class($this) . ".php";

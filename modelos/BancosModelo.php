@@ -5,9 +5,8 @@ class BancosModelo extends BaseLibreria
    private $nombre_banco;
    private $codigo_pais;
    private $fecha_proceso;
-
-   private $vista;
-   private $respuesta;
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }

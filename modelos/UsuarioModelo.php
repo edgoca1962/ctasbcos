@@ -6,8 +6,8 @@ class UsuarioModelo extends BaseLibreria
    private $correo_usuario;
    private $clave;
    private $fecha_proceso;
+   private $consultas;
    private $datos_usuario;
-   private $consulta_base_datos;
 
    protected function __construct()
    {
@@ -23,10 +23,10 @@ class UsuarioModelo extends BaseLibreria
    }
    protected function get_usuario_modelo()
    {
-      $this->consulta_base_datos = $this->conectar()->prepare("SELECT * FROM usuarios WHERE correo_usuario = :correo_usuario");
-      $this->consulta_base_datos->bindParam(":correo_usuario", $this->correo_usuario);
-      $this->consulta_base_datos->execute();
-      $this->datos_usuario = $this->consulta_base_datos->fetch();
+      $this->consultas = $this->conectar()->prepare("SELECT * FROM usuarios WHERE correo_usuario = :correo_usuario");
+      $this->consultas->bindParam(":correo_usuario", $this->correo_usuario);
+      $this->consultas->execute();
+      $this->datos_usuario = $this->consultas->fetch();
       if (!empty($this->datos_usuario)) {
          $this->id = $this->datos_usuario["id"];
          $this->nombre_usuario = $this->datos_usuario["nombre_usuario"];

@@ -5,6 +5,8 @@ class TipoMovimientosModelo extends BaseLibreria
    private $codigo_movimiento;
    private $descripcion;
    private $fecha_proceso;
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }

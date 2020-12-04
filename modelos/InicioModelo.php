@@ -6,8 +6,8 @@ class InicioModelo extends BaseLibreria
    private $palabras_clave;
    private $descripcion;
    private $titulo;
-   private $datos_componentes;
-   private $consulta_base_datos;
+   private $consultas;
+   private $datos_consulta;
 
    protected function __construct()
    {

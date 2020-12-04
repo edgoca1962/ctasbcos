@@ -7,7 +7,6 @@ class Usuario extends UsuarioModelo
    private $clave;
    private $fecha_proceso;
    private $consulta_base_datos;
-
    public function __construct()
    {
       parent::__construct();
@@ -35,10 +34,6 @@ class Usuario extends UsuarioModelo
          $this->clave = $this->get_atributo_modelo("clave");
          return true;
       } else {
-         $this->id = null;
-         $this->nombre_usuario = null;
-         $this->correo_usuario = null;
-         $this->clave = null;
          return false;
       }
    }

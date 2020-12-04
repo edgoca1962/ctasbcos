@@ -6,11 +6,8 @@ class PlantillaModelo extends BaseLibreria
    private $icono;
    private $logotipo;
    private $rutas_proyecto;
-
-   private $consulta_base_datos;
-   private $datos_rutas_proyecto;
-   private $datos_componentes;
-
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }
@@ -25,11 +22,11 @@ class PlantillaModelo extends BaseLibreria
    protected function insertar_registro_modelo()
    {
       $this->id = $this->get_atributo_modelo('id');
-      $this->consulta_base_datos = $this->conectar()->prepare(
+      $this->consultas = $this->conectar()->prepare(
          "INSERT INTO modelo (id) VALUES (:id)"
       );
-      $this->consulta_base_datos->bindParam(':id', $this->id, PDO::PARAM_STR);
-      if ($this->consulta_base_datos->execute()) {
+      $this->consultas->bindParam(':id', $this->id, PDO::PARAM_STR);
+      if ($this->consultas->execute()) {
          $this->conexion = null;
          return true;
       } else {
@@ -40,11 +37,11 @@ class PlantillaModelo extends BaseLibreria
    protected function eliminar_registro_modelo()
    {
       $this->id = $this->get_atributo_modelo('id');
-      $this->consulta_base_datos = $this->conectar()->prepare(
+      $this->consultas = $this->conectar()->prepare(
          "DELETE FROM modelo WHERE id = :valor"
       );
-      $this->consulta_base_datos->bindParam(':id', $this->id, PDO::PARAM_STR);
-      if ($this->consulta_base_datos->execute()) {
+      $this->consultas->bindParam(':id', $this->id, PDO::PARAM_STR);
+      if ($this->consultas->execute()) {
          $this->conexion = null;
          return true;
       } else {
@@ -55,11 +52,11 @@ class PlantillaModelo extends BaseLibreria
    protected function modifica_registro_modelo()
    {
       $this->id = $this->get_atributo_modelo('id');
-      $this->consulta_base_datos = $this->conectar()->prepare(
+      $this->consultas = $this->conectar()->prepare(
          "UPDATE tabla SET campo1='modificación', campo2='modificacion', campo3='modificacion' WHERE id = :valor"
       );
-      $this->consulta_base_datos->bindParam(':id', $this->id, PDO::PARAM_STR);
-      if ($this->consulta_base_datos->execute()) {
+      $this->consultas->bindParam(':id', $this->id, PDO::PARAM_STR);
+      if ($this->consultas->execute()) {
          $this->conexion = null;
          return true;
       } else {

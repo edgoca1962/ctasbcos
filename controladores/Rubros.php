@@ -5,10 +5,8 @@ class Rubros extends RubrosModelo
    private $categoria;
    private $sub_categoria;
    private $fecha_proceso;
-
    private $vista;
    private $respuesta;
-
    public function __construct()
    {
       $this->vista = get_class($this) . ".php";

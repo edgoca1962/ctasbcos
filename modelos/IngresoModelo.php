@@ -5,8 +5,8 @@ class IngresoModelo extends BaseLibreria
    private $palabras_claves;
    private $titulo;
    private $elementos;
-   private $datos_elementos;
-   private $consulta_base_datos;
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }

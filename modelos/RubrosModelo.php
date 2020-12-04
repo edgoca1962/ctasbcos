@@ -5,6 +5,8 @@ class RubrosModelo extends BaseLibreria
    private $categoria;
    private $sub_categoria;
    private $fecha_proceso;
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }

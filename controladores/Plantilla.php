@@ -17,8 +17,6 @@ class Plantilla extends PlantillaModelo
    private $ruta_js_plugins;
    private $elementos;
    private $datos_elementos;
-
-
    public function __construct()
    {
       parent::__construct();

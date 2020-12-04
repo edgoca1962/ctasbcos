@@ -4,6 +4,8 @@ class EntidadesModelo extends BaseLibreria
    private $id;
    private $nombre_entidad;
    private $fecha_proceso;
+   private $consultas;
+   private $datos_consulta;
    protected function __construct()
    {
    }

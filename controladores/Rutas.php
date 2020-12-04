@@ -16,7 +16,6 @@ class Rutas extends RutasModelo
    private $ruta_img_usr;
    private $vista;
    private $respuesta;
-
    public function __construct()
    {
       $this->get_rutas();

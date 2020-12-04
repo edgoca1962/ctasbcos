@@ -14,10 +14,6 @@ class CuentasBancariasModelo extends BaseLibreria
    private $fecha_apertura;
    private $fecha_cierre;
    private $fecha_proceso;
-
-   private $vista;
-   private $respuesta;
-
    protected function __construct()
    {
    }
