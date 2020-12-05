@@ -82,4 +82,5 @@
       <!-- /.card -->
    </section>
 </div>
+
 <?php include_once "vistas/contenidos/Pag_inferior.php"; ?>
