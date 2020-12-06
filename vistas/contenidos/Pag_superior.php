@@ -129,7 +129,7 @@
                               <a href="<?= $plantilla->get_atributo("ruta_dominio"); ?>Usuario" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Usuarios</p>
-                                 <span class="right badge badge-danger">New</span>
+                                 <span <i class="fas fa-bell"></i>3</span>
                               </a>
                            </li>
                            <li class="nav-item">

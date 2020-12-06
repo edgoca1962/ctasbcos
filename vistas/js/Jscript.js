@@ -66,7 +66,7 @@ $(document).ready(function () {
     });
   }
   /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
-    Usuario y Contraseña
+    Formulario Ingreso - Usuario y Contraseña
    ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/
   $("#frm_ingreso").submit(function (e) {
     e.preventDefault();
@@ -126,6 +126,29 @@ $(document).ready(function () {
       error: function () {
         console.log("No se recibió una respuesta válida del servidor.");
       },
+    });
+  });
+  /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
+    Formulario Usuario
+   ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/
+  $("#frm_usuario").submit(function (e) {
+    e.preventDefault();
+    let datos = $(this).serializeArray();
+    datos.push({ name: "elemento", value: "frm_usuario" });
+    console.log(foto_usuario);
+    $("#foto_usuario").change(function (e) {
+      e.preventDefault();
+      var objeto = $(this);
+      var archivo = $(this).prop("files")[0];
+      if (archivo) {
+        datos_archivo(archivo, function (datos) {
+          console.log(datos);
+          objeto.val("");
+          var tipo_archivo = datos.file_type;
+          console.log(tipo_archivo);
+          console.log(JSON.stringify(datos, undefined, 5));
+        });
+      }
     });
   });
   /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
