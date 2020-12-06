@@ -131,26 +131,18 @@ $(document).ready(function () {
   /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
     Formulario Usuario
    ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/
+  var foto_usuario;
+  $("#foto_usuario").change(function () {
+    foto_usuario = this.files[0];
+    console.log(foto_usuario);
+  });
   $("#frm_usuario").submit(function (e) {
     e.preventDefault();
     let datos = $(this).serializeArray();
     datos.push({ name: "elemento", value: "frm_usuario" });
-    console.log(foto_usuario);
-    $("#foto_usuario").change(function (e) {
-      e.preventDefault();
-      var objeto = $(this);
-      var archivo = $(this).prop("files")[0];
-      if (archivo) {
-        datos_archivo(archivo, function (datos) {
-          console.log(datos);
-          objeto.val("");
-          var tipo_archivo = datos.file_type;
-          console.log(tipo_archivo);
-          console.log(JSON.stringify(datos, undefined, 5));
-        });
-      }
-    });
+    datos.push({ datos_imagen: foto_usuario });
   });
+
   /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
    Gráfico de Ingresos y Egresos
    ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/

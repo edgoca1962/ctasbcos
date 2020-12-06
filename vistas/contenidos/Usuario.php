@@ -2,7 +2,7 @@
 <div class="container">
    <section class="section">
       <h2 class="section-heading h1 pt-4 mb-5">Mantenimiento de Usuarios</h2>
-      <form id="frm_usuario">
+      <form id="frm_usuario" enctype="multipart/form-data">
          <div class="card">
             <div class="card-body">
                <div class="row">
@@ -48,7 +48,7 @@
                               <span class="input-group-text btn-primary" id="inputGroupFileAddon01"><i class="far fa-file-image"></i></i></span>
                            </div>
                            <div class="custom-file">
-                              <input type="file" class="custom-file-input" id="foto_usuario" aria-describedby="inputGroupFileAddon01">
+                              <input type="file" class="custom-file-input" id="foto_usuario" name="foto_usuario" aria-describedby="inputGroupFileAddon01">
                               <label class="custom-file-label" for="foto_usuario">Elegir Archivo</label>
                            </div>
                         </div>
