@@ -62,5 +62,16 @@ $nucleo = new NucleoLibreria("Ajax");
 if (isset($_POST["elemento"])) {
     $jscript = new Jscrip($_POST["elemento"]);
 } else {
+    if (isset($_POST['image'])) {
+        // Falta proceso de registro con el nombre creado.
+        $data = $_POST['image'];
+        $image_array_1 = explode(";", $data);
+        $image_array_2 = explode(",", $image_array_1[1]);
+        $data = base64_decode($image_array_2[1]);
+        $image_path = '../vistas/img/usuarios/';
+        $image_name = 'img_' . time() . '.png';
+        file_put_contents($image_path . $image_name, $data);
+        echo $image_name;
+    }
     echo false;
 }
