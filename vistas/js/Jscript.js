@@ -200,7 +200,12 @@ $(document).ready(function () {
     datos.push({ name: "elemento", value: "frm_usuario" });
     datos.push({ datos_imagen: foto_usuario });
   });
-
+  /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
+   Manejo de menues
+   ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/
+  $(".nav-item").click(function () {
+    console.log(this);
+  });
   /*«««««««««««««««««««««««« * »»»»»»»»»»»»»»»»»»»»»»»»
    Gráfico de Ingresos y Egresos
    ««««««««««««««««««««««««-»»»»»»»»»»»»»»»»»»»»»»»»*/

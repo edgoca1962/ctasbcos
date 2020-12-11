@@ -153,6 +153,26 @@
                         </ul>
                      </li>
                   <?php endif ?>
+                  <?php if ($controlador->get_atributo("tipo_usuario") >= 4) : ?>
+                     <li class="nav-item has-treeview">
+                        <a href="#" class="nav-link active">
+                           <i class="fas fa-cogs"></i>
+                           <p>
+                              Pruebas
+                              <i class="right fas fa-angle-left"></i>
+                           </p>
+                        </a>
+                        <ul class="nav nav-treeview" style="display: none;">
+                           <li class="nav-item">
+                              <a href="<?= $plantilla->get_atributo("ruta_dominio"); ?>Usuario" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Manejo Imagenes</p>
+                                 <span class="badge badge-danger navbar-badge"><i class="fas fa-bell"></i> 3</span>
+                              </a>
+                           </li>
+                        </ul>
+                     </li>
+                  <?php endif ?>
                </ul>
             </nav>
             <!-- /.sidebar-menu -->
