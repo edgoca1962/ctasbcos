@@ -164,7 +164,7 @@
                         </a>
                         <ul class="nav nav-treeview" style="display: none;">
                            <li class="nav-item">
-                              <a href="<?= $plantilla->get_atributo("ruta_dominio"); ?>Usuario" class="nav-link">
+                              <a href="<?= $plantilla->get_atributo("ruta_dominio"); ?>Resize" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
                                  <p>Manejo Imagenes</p>
                                  <span class="badge badge-danger navbar-badge"><i class="fas fa-bell"></i> 3</span>
@@ -187,7 +187,7 @@
             <div class="container-fluid">
                <div class="row mb-2">
                   <div class="col-sm-6">
-                     <h1 class="m-0 text-dark">Inicio</h1>
+                     <h1 class="m-0 text-dark"><?= $controlador->get_atributo("titulo") ?></h1>
                   </div><!-- /.col -->
                   <div class="col-sm-6">
                      <ol class="breadcrumb float-sm-right">
