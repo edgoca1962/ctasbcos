@@ -29,7 +29,7 @@ class BaseLibreria
     $this->salt = null;
   }
   protected function conectar()
-  {                                    //Hostinger 
+  {                                    //Hostinger  prueba de ignorar
     $this->host = 'localhost';        // https://fgh-org.org/ctasbcos
     $this->usuario = 'root';          // u960867815_edgoca1962
     $this->clave = 'root';            //Fagohi1986
