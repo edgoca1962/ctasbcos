@@ -154,6 +154,7 @@
                      </li>
                   <?php endif ?>
                   <?php if ($controlador->get_atributo("tipo_usuario") >= 4) : ?>
+                     <!-- Menu de pruebas -->
                      <li class="nav-item has-treeview">
                         <a href="#" class="nav-link active">
                            <i class="fas fa-cogs"></i>
