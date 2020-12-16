@@ -166,7 +166,14 @@
                            <li class="nav-item">
                               <a href="<?= $plantilla->get_atributo("ruta_dominio"); ?>Resize" class="nav-link">
                                  <i class="far fa-circle nav-icon"></i>
-                                 <p>Manejo Imagenes</p>
+                                 <p>Manejo Imagenes PHP</p>
+                                 <span class="badge badge-danger navbar-badge"><i class="fas fa-bell"></i> 3</span>
+                              </a>
+                           </li>
+                           <li class="nav-item">
+                              <a href="#" class="nav-link">
+                                 <i class="far fa-circle nav-icon"></i>
+                                 <p>Manejo Imagenes JS</p>
                                  <span class="badge badge-danger navbar-badge"><i class="fas fa-bell"></i> 3</span>
                               </a>
                            </li>
