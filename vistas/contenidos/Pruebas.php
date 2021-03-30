@@ -3,10 +3,11 @@
    <div class="card">
       <div class="card-body">
          <div class="row">
-            <div class="col">
+            <div class="col-2">
                <img src="vistas/img/usuarios/prueba_original.jpg" class="img-thumbnail rounded-circle" alt="">
             </div>
-            <div class="col">
+            <div class="col">algo</div>
+            <div class="col-2">
                <img src="vistas/img/usuarios/prueba_salida.jpg" class="img-thumbnail rounded-circle" alt="">
             </div>
          </div>
