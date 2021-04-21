@@ -53,12 +53,12 @@ class Ingreso extends IngresoModelo
          $this->descripcion = $this->elementos->get_atributo("datos_elementos")[0]["descripcion"];
          $this->titulo = $this->elementos->get_atributo("datos_elementos")[0]["titulo"];
          $this->palabras_claves = $this->elementos->get_atributo("datos_elementos")[0]["palabras_claves"];
-         $this->conexion = null;
-         return true;
+         $this->respuesta = true;
       } else {
-         $this->conexion = null;
-         return false;
+         $this->respuesta = false;
       }
+      $this->conexion = null;
+      return $this->respuesta;
    }
    public function validar_credenciales()
    {

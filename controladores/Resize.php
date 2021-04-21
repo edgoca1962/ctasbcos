@@ -23,7 +23,7 @@ class Resize extends BaseLibreria
       $this->image    = $this->openImage($this->fileName);
       $this->width    = imagesx($this->image);
       $this->height   = imagesy($this->image);
-      $this->resizeImage(400, 400, "crop9");
+      $this->resizeImage(400, 400, "crop");
       $this->saveImage('vistas/img/usuarios/prueba_salida.jpg', 100);
 
 
